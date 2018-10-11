@@ -98,7 +98,6 @@ function handleKegs(storage) {
   storage.forEach(storage => {
     console.log("storage level of " + storage.name + ": " + storage.amount);
   });
-  console.log("exemplu : " + storage[0].amount);
 
   document
     .querySelector(".k0")
@@ -153,8 +152,49 @@ function handleKegs(storage) {
 function handleTaps(taps) {
   taps.forEach(taps => {
     console.log("Level of " + taps.beer + ": " + taps.level);
-    console.log("level of using: " + taps.inUse);
   });
+
+  if (taps[0].inUse == true) {
+    document
+      .querySelector(".pipe-1")
+      .setAttribute("fill", document.querySelector(".s0").getAttribute("fill"));
+  }
+
+  if (taps[1].inUse == true) {
+    document
+      .querySelector(".pipe-1")
+      .setAttribute("fill", document.querySelector(".s1").getAttribute("fill"));
+  }
+
+  if (taps[2].inUse == true) {
+    document
+      .querySelector(".pipe-2")
+      .setAttribute("fill", document.querySelector(".s2").getAttribute("fill"));
+  }
+
+  if (taps[3].inUse == true) {
+    document
+      .querySelector(".pipe-2")
+      .setAttribute("fill", document.querySelector(".s3").getAttribute("fill"));
+  }
+
+  if (taps[4].inUse == true) {
+    document
+      .querySelector(".pipe-3")
+      .setAttribute("fill", document.querySelector(".s4").getAttribute("fill"));
+  }
+
+  if (taps[5].inUse == true) {
+    document
+      .querySelector(".pipe-3")
+      .setAttribute("fill", document.querySelector(".s5").getAttribute("fill"));
+  }
+
+  if (taps[6].inUse == true) {
+    document
+      .querySelector(".pipe-3")
+      .setAttribute("fill", document.querySelector(".s6").getAttribute("fill"));
+  }
 
   document.querySelector(".ppltotal").textContent = customers;
 
